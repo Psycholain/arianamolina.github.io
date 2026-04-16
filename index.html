@@ -780,16 +780,6 @@ nav {
 .contact-item a:hover { color: var(--purple); }
 .contact-item span { color: var(--mid); font-weight: 300; font-size: 1.05rem; line-height: 1.55; }
 
-.portfolio-credit {
-  position: absolute;
-  bottom: 20px;
-  left: 30px;
-  font-size: 0.75rem;
-  color: var(--mid);
-  opacity: 0.6;
-  font-weight: 300;
-}
-
 /* scrollbar */
 .page::-webkit-scrollbar { width: 4px; }
 .page::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
@@ -818,245 +808,16 @@ nav {
   0%, 100% { border-color: var(--purple); }
   50%       { border-color: transparent; }
 }
-
-/* ════ MOBILE RESPONSIVE ════ */
-@media (max-width: 768px) {
-  /* Navigation */
-  nav {
-    height: 70px;
-  }
-  
-  .nav-center {
-    overflow-x: auto;
-    overflow-y: hidden;
-    justify-content: flex-start;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  .nav-center a {
-    font-size: 0.95rem;
-    padding: 0 20px;
-  }
-  
-  .nav-right {
-    padding-right: 16px;
-  }
-  
-  .lang-btn {
-    font-size: 0.75rem;
-    padding: 6px 12px;
-  }
-  
-  /* Pages */
-  .page {
-    top: 70px;
-  }
-  
-  /* Home */
-  .home-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 40px 24px;
-    text-align: center;
-  }
-  
-  .home-photo-col {
-    order: -1;
-  }
-  
-  .photo-frame {
-    width: 200px;
-    height: 240px;
-    margin: 0 auto;
-  }
-  
-  .home-text-content {
-    padding: 30px 24px;
-  }
-  
-  .home-tagline {
-    font-size: 1.5rem;
-  }
-  
-  .home-role {
-    font-size: 1.1rem;
-  }
-  
-  .home-desc p {
-    font-size: 0.9rem;
-    max-width: 100%;
-  }
-  
-  .home-cta {
-    flex-direction: column;
-    gap: 12px;
-  }
-  
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  /* Reduce particles on mobile for performance */
-  #particles-canvas {
-    display: none;
-  }
-  
-  /* Experience */
-  .experience-layout {
-    flex-direction: column;
-  }
-  
-  .exp-sidebar {
-    width: 100%;
-    height: auto;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-    overflow-x: auto;
-    overflow-y: visible;
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    gap: 12px;
-  }
-  
-  .exp-item {
-    min-width: 200px;
-    padding: 16px;
-  }
-  
-  .exp-detail {
-    width: 100%;
-    padding: 30px 24px;
-  }
-  
-  .exp-card {
-    flex-direction: column;
-  }
-  
-  .exp-card-visual {
-    width: 100%;
-    height: 200px;
-  }
-  
-  /* Approach */
-  .approach-page {
-    padding: 30px 24px;
-  }
-  
-  .approach-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .approach-card {
-    padding: 24px;
-  }
-  
-  .principles-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  /* Work */
-  .work-page {
-    padding: 30px 24px;
-  }
-  
-  .work-top-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .page-heading {
-    font-size: 1.8rem;
-  }
-  
-  /* About */
-  .about-inner {
-    grid-template-columns: 1fr;
-    padding: 30px 24px;
-    gap: 30px;
-  }
-  
-  .about-photo {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-  
-  .about-me-title {
-    font-size: 1.8rem;
-  }
-  
-  .about-text p {
-    font-size: 0.95rem;
-  }
-  
-  /* Contact */
-  .contact-inner {
-    padding: 30px 24px;
-  }
-  
-  .contact-items {
-    gap: 24px;
-  }
-  
-  .contact-item {
-    font-size: 1rem;
-  }
-  
-  .contact-item a {
-    font-size: 1rem;
-    word-break: break-word;
-  }
-  
-  .portfolio-credit {
-    font-size: 0.7rem;
-    left: 20px;
-    bottom: 15px;
-  }
-  
-  /* Report cards */
-  .report-card {
-    flex-direction: column;
-  }
-  
-  .report-thumb {
-    width: 100%;
-    height: 120px;
-  }
-}
-
-/* Small phones */
-@media (max-width: 480px) {
-  .home-tagline {
-    font-size: 1.3rem;
-  }
-  
-  .home-role {
-    font-size: 1rem;
-  }
-  
-  .home-desc p {
-    font-size: 0.85rem;
-  }
-  
-  .home-text-content {
-    padding: 24px 20px;
-  }
-  
-  .nav-center a {
-    font-size: 0.85rem;
-    padding: 0 16px;
-  }
-  
-  .page-heading {
-    font-size: 1.5rem;
-  }
-}
-
 </style>
 </head>
 <body>
+
+<script>
+// Redirect to mobile version if screen is small
+if (window.innerWidth <= 768) {
+  window.location.href = 'mobile.html';
+}
+</script>
 
 <!-- NAV -->
 <nav>
@@ -1104,9 +865,6 @@ nav {
         <a href="#" class="btn btn-teal" onclick="goTo('contact');return false;">Contact</a>
       </div>
     </div>
-  </div>
-  <div class="portfolio-credit">
-    Website created by Ariana Molina, 2026
   </div>
 </div>
 
@@ -1379,12 +1137,12 @@ function restartTypewriter() {
 
 // Experience
 const expData = [
-  { img:'excellgene.png', bg:'linear-gradient(135deg,#0d2b0d,#1a4a1a,#2d6e2d)', title:'ESG Project Coordinator', org:'ExcellGene SA · 2025', desc:'Led sustainability reporting and ESG initiatives for a Swiss biotech company. Produced the ExcellGene Sustainability Report 2025, covering environmental, social, and governance dimensions.', tags:[{l:'Biotech',c:'tag-teal'},{l:'Sustainability',c:'tag-teal'},{l:'CO2 Calculation',c:'tag-purple'},{l:'KPI Creation',c:'tag-purple'},{l:'Risk Management',c:'tag-purple'},{l:'Data Analysis',c:'tag-purple'}] },
-  { img:'cernsciencecommunication.png', bg:'linear-gradient(135deg,#0a0a1a,#1a1040,#2d1b69)', title:'Science Communicator', org:'CERN · 2024', desc:'Communicated complex scientific concepts to diverse audiences at one of the world\'s leading physics research centers. Designed and delivered engaging content bridging science and the general public.', tags:[{l:'Scientific Communication',c:'tag-teal'},{l:'Science Gateway',c:'tag-teal'},{l:'Communication',c:'tag-purple'},{l:'Public Outreach',c:'tag-purple'}] },
-  { img:'cerndataanalyst.png', bg:'linear-gradient(135deg,#0a0a1a,#1a1040,#2d1b69)', title:'Data Analyst & Researcher', org:'CERN · Internship 2024', desc:'Conducted behavioral data analysis and UX research in scientific environments. Analyzed visitor interaction patterns and designed user experiments to improve engagement.', tags:[{l:'Particle Physics Research',c:'tag-teal'},{l:'Department of Exhibitions',c:'tag-teal'},{l:'R',c:'tag-purple'},{l:'Data Analysis',c:'tag-purple'},{l:'Excel',c:'tag-purple'},{l:'UX Research',c:'tag-purple'},{l:'Python',c:'tag-purple'}], extra:['Behavioral data analysis','Visitor interaction patterns','User experiments'] },
-  { img:'siesa.png', bg:'linear-gradient(135deg,#1a1a2e,#2d2d50,#1a3a6a)', title:'Data Entry Consultant', org:'SIE SA · 2023', desc:'Provided data management and entry consulting services, ensuring data accuracy, consistency, and reliability across organizational systems.', tags:[{l:'Energy',c:'tag-teal'},{l:'Excel',c:'tag-purple'},{l:'SAP',c:'tag-purple'},{l:'Web Site Management',c:'tag-purple'},{l:'Power BI',c:'tag-purple'}] },
-  { img:'creditsuisse.png', bg:'linear-gradient(135deg,#0a1628,#1a2d4a,#2d4a6e)', title:'Receptionist', org:'Credit Suisse (UBS AG) · 2022', desc:"Provided front-desk services at one of Switzerland's leading financial institutions, developing strong interpersonal and organizational skills in a high-standard corporate environment.", tags:[{l:'Banking',c:'tag-teal'},{l:'Client Relations',c:'tag-purple'},{l:'Excel',c:'tag-purple'},{l:'CDB20',c:'tag-purple'}] },
-  { img:'cantonvaud.png', bg:'linear-gradient(135deg,#1a0a0a,#3a1a1a,#5a2020)', title:'File Manager', org:'Canton of Vaud · 2021', desc:'Performed financial analysis and data entry tasks for the Canton of Vaud, contributing to public sector financial reporting and budget monitoring.', tags:[{l:'Public Sector',c:'tag-teal'},{l:'Jira',c:'tag-purple'},{l:'Financial Analysis',c:'tag-purple'},{l:'Stakeholder Relations',c:'tag-purple'},{l:'Excel',c:'tag-purple'}] },
+  { img:'images/excellgene.png', bg:'linear-gradient(135deg,#0d2b0d,#1a4a1a,#2d6e2d)', title:'ESG Project Coordinator', org:'ExcellGene SA · 2025', desc:'Led sustainability reporting and ESG initiatives for a Swiss biotech company. Produced the ExcellGene Sustainability Report 2025, covering environmental, social, and governance dimensions.', tags:[{l:'Biotech',c:'tag-teal'},{l:'Sustainability',c:'tag-teal'},{l:'CO2 Calculation',c:'tag-purple'},{l:'KPI Creation',c:'tag-purple'},{l:'Risk Management',c:'tag-purple'},{l:'Data Analysis',c:'tag-purple'}] },
+  { img:'images/cernsciencecommunication.png', bg:'linear-gradient(135deg,#0a0a1a,#1a1040,#2d1b69)', title:'Science Communicator', org:'CERN · 2024', desc:'Communicated complex scientific concepts to diverse audiences at one of the world\'s leading physics research centers. Designed and delivered engaging content bridging science and the general public.', tags:[{l:'Scientific Communication',c:'tag-teal'},{l:'Science Gateway',c:'tag-teal'},{l:'Communication',c:'tag-purple'},{l:'Public Outreach',c:'tag-purple'}] },
+  { img:'images/cerndataanalyst.png', bg:'linear-gradient(135deg,#0a0a1a,#1a1040,#2d1b69)', title:'Data Analyst & Researcher', org:'CERN · Internship 2024', desc:'Conducted behavioral data analysis and UX research in scientific environments. Analyzed visitor interaction patterns and designed user experiments to improve engagement.', tags:[{l:'Particle Physics Research',c:'tag-teal'},{l:'Department of Exhibitions',c:'tag-teal'},{l:'R',c:'tag-purple'},{l:'Data Analysis',c:'tag-purple'},{l:'Excel',c:'tag-purple'},{l:'UX Research',c:'tag-purple'},{l:'Python',c:'tag-purple'}], extra:['Behavioral data analysis','Visitor interaction patterns','User experiments'] },
+  { img:'images/siesa.png', bg:'linear-gradient(135deg,#1a1a2e,#2d2d50,#1a3a6a)', title:'Data Entry Consultant', org:'SIE SA · 2023', desc:'Provided data management and entry consulting services, ensuring data accuracy, consistency, and reliability across organizational systems.', tags:[{l:'Energy',c:'tag-teal'},{l:'Excel',c:'tag-purple'},{l:'SAP',c:'tag-purple'},{l:'Web Site Management',c:'tag-purple'},{l:'Power BI',c:'tag-purple'}] },
+  { img:'images/creditsuisse.png', bg:'linear-gradient(135deg,#0a1628,#1a2d4a,#2d4a6e)', title:'Receptionist', org:'Credit Suisse (UBS AG) · 2022', desc:"Provided front-desk services at one of Switzerland's leading financial institutions, developing strong interpersonal and organizational skills in a high-standard corporate environment.", tags:[{l:'Banking',c:'tag-teal'},{l:'Client Relations',c:'tag-purple'},{l:'Excel',c:'tag-purple'},{l:'CDB20',c:'tag-purple'}] },
+  { img:'images/cantonvaud.png', bg:'linear-gradient(135deg,#1a0a0a,#3a1a1a,#5a2020)', title:'File Manager', org:'Canton of Vaud · 2021', desc:'Performed financial analysis and data entry tasks for the Canton of Vaud, contributing to public sector financial reporting and budget monitoring.', tags:[{l:'Public Sector',c:'tag-teal'},{l:'Jira',c:'tag-purple'},{l:'Financial Analysis',c:'tag-purple'},{l:'Stakeholder Relations',c:'tag-purple'},{l:'Excel',c:'tag-purple'}] },
 ];
 
 function selectExp(idx, el) {
